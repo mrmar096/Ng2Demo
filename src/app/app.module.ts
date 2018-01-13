@@ -4,12 +4,14 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import {HeaderComponent} from '../shared/components/header/header.component';
 import {ListComponent} from '../shared/components/list/list.component';
+import { StringPipe } from '../shared/pipes/string.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListComponent
+    ListComponent,
+    StringPipe
   ],
   imports: [
     BrowserModule,
