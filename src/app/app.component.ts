@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ProductsService} from '../shared/services/products.service';
 
 @Component({
   selector: 'app-root',
@@ -6,33 +7,16 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  private productService: ProductsService;
+  constructor(productService: ProductsService) {
+    this.productService = productService;
+  }
   private listProducts: Array<any>;
   cambiaLaLista() {
     this.listProducts.reverse();
   }
   cargarLista() {
-    this.listProducts = [
-      {
-        id: '1',
-        description: 'Descripcion 1'
-      },
-      {
-        id: '2',
-        description: 'Descripcion 2'
-      },
-      {
-        id: '3',
-        description: 'Descripcion 3'
-      },
-      {
-        id: '4',
-        description: 'Descripcion 4'
-      },
-      {
-        id: '5',
-        description: 'Descripcion 5'
-      }
-    ];
+    this.listProducts = this.productService.getData();
   }
 }
 

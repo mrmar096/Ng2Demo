@@ -4,6 +4,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import {HeaderComponent} from '../shared/components/header/header.component';
 import {ListComponent, ProductPipe} from '../shared/components/list/list.component';
+import {ProductsService} from '../shared/services/products.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,7 @@ import {ListComponent, ProductPipe} from '../shared/components/list/list.compone
     BrowserModule,
     MaterializeModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
