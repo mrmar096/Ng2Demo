@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ProductsService} from '../shared/services/products.service';
+import {DataService} from '../shared/services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +7,9 @@ import {ProductsService} from '../shared/services/products.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  private productService: ProductsService;
-  constructor(productService: ProductsService) {
-    this.productService = productService;
-  }
-  private listProducts: Array<any>;
-  cambiaLaLista() {
-    this.listProducts.reverse();
-  }
-  cargarLista() {
-    this.listProducts = this.productService.getData();
+  private dataService: DataService;
+  constructor(dataService: DataService) {
+    this.dataService = dataService;
   }
 }
 

@@ -4,21 +4,23 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import {HeaderComponent} from '../shared/components/header/header.component';
 import {ListComponent, ProductPipe} from '../shared/components/list/list.component';
-import {ProductsService} from '../shared/services/products.service';
-import {ProductModule} from './product/product.module';
+import {DataService} from '../shared/services/data.service';
+import {HttpClientModule} from '@angular/common/http';
+import {ProductComponent} from './product/product.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ListComponent,
-    ProductPipe,
-    ProductModule
-  ],
+    ProductComponent,
+    ProductPipe],
   imports: [
     BrowserModule,
-    MaterializeModule
+    MaterializeModule,
+    HttpClientModule
   ],
-  providers: [ProductsService],
+  providers: [DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
