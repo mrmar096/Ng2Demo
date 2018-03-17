@@ -16,6 +16,7 @@ import {DashboardModule} from './dashboard/dashboard.module';
 import {ProductModule} from './product/product.module';
 import {AuthGuardService} from '../shared/services/auth-guard.service';
 import {AuthService} from '../shared/services/auth.service';
+import {ShopModule} from './shop/shop.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {AuthService} from '../shared/services/auth.service';
     AppRoutingModule,
     LoginModule,
     DashboardModule,
-    ProductModule
+    ProductModule,
+    ShopModule
   ],
   providers: [DataService, AuthGuardService, AuthService],
   bootstrap: [AppComponent],
