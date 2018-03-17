@@ -7,20 +7,33 @@ import {ListComponent, ProductPipe} from '../shared/components/list/list.compone
 import {DataService} from '../shared/services/data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductComponent} from './product/product.component';
+import {LoginComponent} from './login/login.component';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {LoginModule} from './login/login.module';
+import {DashboardModule} from './dashboard/dashboard.module';
+import {ProductModule} from './product/product.module';
+import {AuthGuardService} from '../shared/services/auth-guard.service';
+import {AuthService} from '../shared/services/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ListComponent,
-    ProductComponent,
-    ProductPipe],
+    ProductPipe
+  ],
   imports: [
     BrowserModule,
     MaterializeModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    LoginModule,
+    DashboardModule,
+    ProductModule
   ],
-  providers: [DataService],
+  providers: [DataService, AuthGuardService, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

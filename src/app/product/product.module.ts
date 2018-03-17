@@ -9,4 +9,4 @@ import {ProductComponent} from './product.component';
   providers: [],
   bootstrap: []
 })
-export class ListModule { }
+export class ProductModule { }

@@ -8,7 +8,7 @@ export class AuthService {
     private router: Router,
   ) { }
 
-  checkLogged() {
+  checkLogged(): boolean {
     return this.isLogged;
   }
   login () {
