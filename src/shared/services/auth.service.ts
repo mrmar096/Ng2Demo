@@ -4,9 +4,7 @@ import {Router} from '@angular/router';
 @Injectable()
 export class AuthService {
   private isLogged = false;
-  constructor(
-    private router: Router,
-  ) { }
+  constructor() { }
 
   checkLogged(): boolean {
     return this.isLogged;

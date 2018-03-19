@@ -12,6 +12,7 @@ import {ProductRoutingModule} from './product-routing.module';
   ],
   imports: [ProductRoutingModule],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
+  exports: [ProductComponent]
 })
 export class ProductModule { }

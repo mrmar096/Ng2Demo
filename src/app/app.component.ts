@@ -7,9 +7,7 @@ import {DataService} from '../shared/services/data.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  private dataService: DataService;
-  constructor(dataService: DataService) {
-    this.dataService = dataService;
+  constructor(private dataService: DataService) {
   }
 }
 

@@ -33,7 +33,7 @@ import {ShopModule} from './shop/shop.module';
     LoginModule,
     DashboardModule,
     ProductModule,
-    ShopModule
+    ShopModule,
   ],
   providers: [DataService, AuthGuardService, AuthService],
   bootstrap: [AppComponent],

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-const BASE_URL = 'http://weblogic.innocv.com/curso-angular-api/';
+import {environment} from '../../environments/environment';
+const BASE_URL = environment.api;
+
 @Injectable()
 export class DataService {
 
