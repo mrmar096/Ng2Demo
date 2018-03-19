@@ -15,7 +15,7 @@ import {ProductDetailComponent} from './product-detail/product-detail.component'
           AuthGuardService
         ],
         children: [
-          { path: '', redirectTo: 'global', pathMatch: 'full' },
+          { path: '', redirectTo: 'list', pathMatch: 'full' },
           { path: 'list', redirectTo: 'global', pathMatch: 'full' },
           { path: 'detail', redirectTo: 'global', pathMatch: 'full' },
           { path: 'list', component: ProductListComponent },
